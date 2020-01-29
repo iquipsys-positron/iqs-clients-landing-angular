@@ -1,0 +1,298 @@
+<div class="w-stretch pip-scroll iqt-landing">
+	<section class="iqt-main-slide" ng-class="{'iqt-main-slide-en' : ln == 'en'}">
+
+		<md-menu md-position-mode="target-right target" style="position: absolute; left: calc(100% - 100px); top: 24px; cursor: pointer;">
+			<span class="pip-language" ng-click="$mdOpenMenu()" aria-label="language selection">
+				{{	ln| translate }}
+				<md-icon md-svg-icon="icons:triangle-down" style="color: #fff"></md-icon>
+    		</span>
+			<md-menu-content width="3">
+				<md-menu-item ng-repeat="language in languages">
+					<md-button ng-click="changeLn(language)" tabindex="7">
+						{{ language | translate }}
+					</md-button>
+				</md-menu-item>
+			</md-menu-content>
+		</md-menu>
+
+
+		<div class="iqt-header">
+			<img src="images/logo_main.svg" class="iqt-logo">
+			<div class="iqt-header-text">
+				{{:: 'MAIN_TITLE' | translate }} <br> {{:: 'MAIN_TITLE1' | translate }}
+			</div>
+
+            <div class="bm16 ">
+                <md-button ng-href="{{ 'https://www.positron.iquipsys.net/monitoring/index.html#/demo?lang=' + ln}}" class="iqt-header-button" ng-class="$mdMedia('xs')? 'rm0' :'rm8'">
+                    {{:: 'DEMO_WORKSITE' | translate}}
+                </md-button>
+                <md-button ng-href="{{ 'https://www.positron.iquipsys.net/home/index.html#/signup?language=' + ln}}" class="iqt-header-button" ng-class="$mdMedia('xs')? 'rm0' :'rm8'">
+                    {{:: 'SIGN_UP_NEW_WORKSITE' | translate}}
+                </md-button>
+                <md-button ng-href="{{ 'https://www.positron.iquipsys.net/home/index.html#/signin?language=' + ln}}" class="iqt-header-button" ng-class="$mdMedia('xs')? 'rm0' :'rm8'">
+                    {{:: 'LOGIN_TO_YOUR_WORSITE' | translate}}
+                </md-button>
+            </div>
+
+			<div class="iqt-header-links">
+				<a href="http://www.iquipsys.com/docs/eng/IQuipsys_proposal.pdf" target="_blank" ng-if="ln == 'en'">
+					{{:: 'GET_FULL' | translate}}
+                </a>
+                <a href="http://www.iquipsys.com/docs/rus/TKP_IQuipsys.pdf" target="_blank" ng-if="ln == 'ru'">
+					{{:: 'GET_FULL' | translate}}
+				</a>
+            </div>
+            <div class="iqt-header-links">
+                <a href="#" ng-click="goContact()">
+                    {{:: 'WRITE_US' | translate}}
+                </a>
+            </div>
+
+		</div>
+
+		<div class="iqt-subheader iqt-content iqt-hide">
+			{{:: 'MAIN_SUBHEADER' | translate}}
+
+		</div>
+	</section>
+
+	<section class="iqt-goals">
+		<div class="iqt-content">
+			<div class="iqt-header-text">
+				{{:: 'GOALS_HEADER_TEXT' | translate}}
+			</div>
+			<div class="iqt-divider"></div>
+
+			<div class="iqt-goal  layout-row" ng-repeat="instrument in goals">
+				<div class="iqt-goal-icon flex-fixed">
+					<img src="{{::instrument.icon}}">
+				</div>
+				<div class="flex">
+					<div class="iqt-goal-title">{{:: instrument.title | translate}}</div>
+					<div class="iqt-goal-content layout-row" ng-repeat="item in instrument.content">
+						<div class="iqt-dot flex-fixed"></div>
+						<div class="iqt-goal-text flex">{{:: item | translate}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
+	<section class="iqt-instruments">
+		<div class="iqt-content">
+			<div class="iqt-instruments-title layout-column layout-align-center-center">
+				<div class="iqt-header-text iqt-center">
+					{{:: 'INSTRUMENTS_HEADER_TEXT' | translate}}
+				</div>
+				<div class="iqt-divider"></div>
+			</div>
+
+			<div class="iqt-instruments-section-title">
+				{{:: 'INSTRUMENTS_SECTION_TITLE' | translate}} <br/> {{:: 'INSTRUMENTS_SECTION_TITLE_1' | translate}}
+			</div>
+
+			<div class="iqt-instrument iqt-instrument-{{$index}}" ng-repeat="instrument in instruments" ng-class="{'iqt-last-instrument': $index == instruments.length -1 }">
+				<div class="iqt-content-side">
+					<div class="iqt-instrument-icon">
+						<img src="{{instrument.icon}}">
+					</div>
+					<div class="iqt-instrument-title">{{:: instrument.title |translate }}</div>
+					<div class="iqt-instrument-content">{{:: instrument.content | translate}}</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<section class="iqt-buy">
+		<div class="iqt-content">
+			<div class="layout-column layout-align-center-center">
+				<div class="iqt-header-text iqt-center">
+					{{:: 'BUY_HEADER_TEXT' | translate }}<br> {{:: 'BUY_HEADER_TEXT1' | translate}}
+				</div>
+				<div class="iqt-accent-divider"></div>
+
+				<div class="iqt-buy-text">
+					{{:: 'BUY_TEXT' | translate}}
+				</div>
+				<md-button ng-click="goContact()" class="iqt-header-button" ng-class="$mdMedia('xs')? 'rm0' :'rm8'">
+					{{:: 'WRITE_US' | translate}}
+				</md-button>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="iqt-work iqt-step1">
+		<div class="iqt-content">
+			<div class="layout-column layout-align-center-center">
+				<div class="iqt-header-text iqt-center">
+					{{:: 'STEPS_HEADER_TEXT' | translate}}
+				</div>
+				<div class="iqt-divider"></div>
+			</div>
+			<img class="iqt-img hide-work-small" src="images/router_step-1.png">
+			<div class="iqt-work-center hide-work-big">
+				<img class="iqt-img" src="images/station_step-1.svg">
+			</div>
+			<div class="layout-row iqt-work-content ">
+				<div class="iqt-content-side"></div>
+				<div class="iqt-content-side">
+					<img src="images/point_1.svg" width="70" height="70" class="iqt-work-point">
+					<div class="iqt-work-title">
+						{{:: 'STEP_TITLE1' | translate}}
+					</div>
+					<div class="iqt-work-subtitle">
+						{{:: 'STEP_SUBTITLE1' | translate}}
+					</div>
+					<div class="layout-row" ng-repeat="item in step1">
+						<div class="iqt-dot flex-fixed"></div>
+						<div class="iqt-work-text">{{:: item | translate}}</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="iqt-work iqt-step2">
+		<div class="iqt-content">
+
+			<div class="iqt-work-center">
+
+				<img class="iqt-img" src="images/traker_step-2.svg">
+			</div>
+			<div class="layout-row iqt-work-content ">
+				<div class="iqt-content-side">
+					<img src="images/point_2.svg" width="70" height="70" class="iqt-work-point">
+					<div class="iqt-work-title">
+						{{:: 'STEP_TITLE2' | translate}}
+					</div>
+					<div class="layout-row" ng-repeat="item in step2">
+						<div class="iqt-dot flex-fixed"></div>
+						<div class="iqt-work-text">{{:: item | translate}}</div>
+					</div>
+					
+				</div>
+				<div class="iqt-content-side"></div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="iqt-work iqt-step3">
+		<div class="iqt-content">
+			<div class="iqt-work-center">
+				<img class="iqt-img" src="images/soft_step-3.svg" ng-if="ln == 'ru'" >
+				<img class="iqt-img" ng-if="ln == 'en'" src="images/soft_step-3-en.svg">
+			</div>
+			<div class="layout-row iqt-work-content ">
+
+				<div class="iqt-content-side"></div>
+				<div class="iqt-content-side">
+
+					<img src="images/point_3.svg" width="70" height="70" class="iqt-work-point">
+					<div class="iqt-work-title">
+						{{:: 'STEP_TITLE3' | translate}} <br> {{:: 'STEP_TITLE3_1' | translate}}
+					</div>
+					<div class="layout-row" ng-repeat="item in step3">
+						<div class="iqt-dot flex-fixed"></div>
+						<div class="iqt-work-text">{{:: item | translate}}</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="iqt-done">
+		<div class="iqt-content ">
+
+			<div class="iqt-header-text">{{:: 'DONE_TITLE' | translate}}</div>
+			<div class="iqt-divider"></div>
+			<div class="iqt-list-text">{{:: 'DONE_SUBTITLE' | translate}}</div>
+			<div class="iqt-list-text" ng-repeat="done in doneText">{{::$index + 1}}. {{::done | translate}} </div>
+
+		</div>
+	</section>
+
+	<section class="iqt-guarantee">
+		<div class="iqt-content layout-row layout-align-start-center">
+			<img src="images/assurance.svg" class="iqt-guarantee-img flex-fixed" ng-if="ln == 'ru'">
+			
+			<img src="images/assurance-en.svg" class="iqt-guarantee-img flex-fixed" ng-if="ln == 'en'">
+			<div class="flex">
+				<div class="iqt-guarantee-title">{{:: 'GUARANTEE_TITLE' | translate}}</div>
+				<div class="iqt-accent-divider"></div>
+				<div class="iqt-guarantee-text">{{:: 'GUARANTEE_SUBTITLE' | translate}}</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="iqt-contact">
+		<div class="iqt-content" ng-if="showContact">
+
+			<div class="iqt-header-text iqt-center">{{:: 'CONTACT_TITLE' | translate }}</div>
+			<div class="layout-column layout-align-center-center iqt-contact-inputs">
+				<div class="layout-row iqt-contact-content">
+					<md-input-container class="pip-footer-input flex">
+						<label>{{:: 'CONTACT_NAME' | translate}}</label>
+						<input ng-model="data.name" ng-init="data.name=''" name="name" id="input-name" required autocomplete="off">
+					</md-input-container>
+
+					<md-input-container class="pip-footer-input flex">
+						<label>{{:: 'CONTACT_EMAIL' | translate}}</label>
+						<input ng-model="data.email" ng-init="data.email=''" type="email" name="email" readonly onfocus="this.removeAttribute('readonly')"
+							required autocomplete="off">
+					</md-input-container>
+
+
+				</div>
+				<md-input-container class="pip-footer-input md-block iqt-contact-message">
+					<label>{{::'CONTACT_MESSAGE' | translate }}</label>
+					<textarea ng-model="data.message" name="message" readonly onfocus="this.removeAttribute('readonly')" required autocomplete="off"></textarea>
+				</md-input-container>
+				<md-button ng-click="contactUs()" class="iqt-header-button" ng-class="$mdMedia('xs')? 'rm0' :'rm8'">
+					{{:: 'CONTACT_SENT' | translate}}
+				</md-button>
+			</div>
+		</div>
+		<div class="iqt-content" ng-if="!showContact">
+			<div class="iqt-header-text iqt-center">
+				{{:: 'CONTACT_SUCCESS' | translate}}
+			</div>
+		</div>
+	</section>
+
+	<footer class="iqt-footer">
+
+		<div class="iqt-content">
+			<div class="layout-row iqt-footer-content ">
+
+				<div class="iqt-content-side">
+					<img src="images/logo_footer.svg" width="250" height="80">
+				</div>
+				<div class="iqt-content-side">
+					<div class="iqt-footer-title">{{:: 'FOOTER_TITLE' | translate}}</div>
+					<div class="layout-row iqt-footer-content iqt-footer-text">
+						<div class="iqt-address flex">{{:: 'FOOTER_ADDRESS' | translate }}</div>
+						<div class="flex iqt-footer-phone">
+							<a href="tel: +79852599722"> {{:: 'FOOTER_PHONE' | translate}}</a>
+							<a href="mailto: info@iquipsys.com">Email: info@iquipsys.com</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="iqt-footer-title">IQUIPSYS INC. ALL RIGHTS RESERVED. 2017</div>
+		</div>
+	</footer>
+</div>

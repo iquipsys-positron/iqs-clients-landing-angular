@@ -1,0 +1,763 @@
+$iqt-color-text: #1a1a1a;
+$iqt-color-white: #fff;
+$iqt-primary-color: #0057Bf;
+$iqt-accent-color: #ff8f00;
+$iqt-window-color: #eee;
+$iqt-color-secondary-text: #666666;
+
+
+$iqt-content-width: 964px;
+$iqt-content-half-width: 480px;
+$iqt-margin-top-bottom: 80px;
+$iqt-margin-top-bottom-sm: 40px;
+
+.flex-fixed {
+  -webkit-box-flex: 0 0 auto;
+	-moz-box-flex: 0 0 auto;
+	-webkit-flex: 0 0 auto;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+}
+
+.iqt-landing {
+  color: $iqt-color-text;
+
+  .iqt-content {
+    width: $iqt-content-width;
+    margin: 0 auto;
+  }
+
+  .iqt-divider {
+    width: 48px;
+    height: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background: $iqt-primary-color;
+  }
+
+  .iqt-accent-divider {
+    @extend .iqt-divider;
+
+    background: $iqt-accent-color;
+  }
+
+  .iqt-header-text {
+    font-size: 45px;
+    line-height: 54px;
+    font-weight: 700;
+  }
+
+  .iqt-content-side {
+    width: $iqt-content-half-width;
+  }
+
+  .iqt-title {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 500;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .iqt-center {
+    text-align: center;
+  }
+
+  .iqt-small-title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+
+  .iqt-list-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: $iqt-color-secondary-text;
+  }
+
+  .iqt-dot {
+    width: 10px;
+    height: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 7px;
+    margin-left: 0px;
+    border-radius: 50%;
+    background: $iqt-accent-color;
+  }
+
+  .iqt-header-button {
+    width: 230px;
+    height: 44px;
+    border-radius: 57px;
+    background-color: $iqt-accent-color !important;
+    color: $iqt-color-white;
+    line-height: 44px;
+    vertical-align: middle;
+    margin: 0px;
+    margin-top: 20px;
+    .md-ripple-container {
+      border-radius: 57px !important;
+    }
+  }
+
+    .iqt-header-links {
+        margin-top: 24px;
+        a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+  .iqt-main-slide.iqt-main-slide-en {
+    background-image: url('images/iQuipsys_landing-page_banner-en.jpg');
+  }
+
+  .iqt-main-slide {
+    height: 1785px;
+    background: $iqt-primary-color;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url('images/iQuipsys_landing-page_banner.jpg');
+    color: $iqt-color-white;
+
+    .iqt-header {
+      width: 420px;
+      margin-left: calc(50% - (964px / 2));
+    }
+
+    .iqt-subheader {
+      margin-top: 210px;
+      max-width: 800px;
+    }
+    .iqt-logo {
+      margin-bottom: 78px;
+      margin-top: 78px;
+      width: 500px;
+      height: 80px;
+    }
+
+  }
+
+  .iqt-goals {
+    background: $iqt-window-color;
+    padding-top: $iqt-margin-top-bottom;
+    padding-bottom: $iqt-margin-top-bottom;
+    width: 100%;
+    .iqt-goal {
+      padding-top: 16px;
+      padding-bottom: 60px;
+    }
+    .iqt-goal-icon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: $iqt-color-secondary-text;
+      margin-right: 30px;
+    }
+
+    .iqt-goal-title {
+      @extend .iqt-title;
+    }
+
+    .iqt-goal-text {
+      @extend .iqt-list-text;
+    }
+  }
+
+  .iqt-instruments {
+    padding-top: $iqt-margin-top-bottom;
+    padding-bottom: $iqt-margin-top-bottom;
+    width: 100%;
+
+    .iqt-instruments-title {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .iqt-instruments-section-title {
+      @extend .iqt-center;
+      border-radius: 20px;
+      padding: 30px 150px;
+      background: $iqt-window-color;
+      color: $iqt-color-secondary-text;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+
+    .iqt-instrument {
+      display: inline-block;
+
+      &.iqt-last-instrument {
+        width: 100%;
+        .iqt-content-side {
+          margin: 0 auto;
+        }
+      }
+
+      .iqt-instrument-icon {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background: $iqt-window-color;
+        margin-top: 16px;
+      }
+
+      .iqt-instrument-title {
+        @extend .iqt-center;
+        @extend .iqt-title;
+        padding-bottom: 16px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        padding-top: 30px;
+      }
+
+      .iqt-instrument-content {
+        @extend .iqt-center;
+        font-size: 16px;
+
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 16px;
+        color: $iqt-color-secondary-text;
+
+      }
+    }
+  }
+
+  .iqt-buy {
+    width: 100%;
+    padding-top: $iqt-margin-top-bottom;
+    padding-bottom: $iqt-margin-top-bottom;
+    background: $iqt-primary-color;
+    color: $iqt-color-white;
+
+    .iqt-header-button {
+      margin-top: 48px;
+    }
+
+    .iqt-buy-text {
+      opacity: .54;
+      font-size: 20px;
+      line-height: 24px;
+      max-width: 800px;
+      @extend .iqt-center;
+    }
+
+  }
+
+  .iqt-work {
+    width: 100%;
+    padding-top: $iqt-margin-top-bottom;
+    padding-bottom: $iqt-margin-top-bottom;
+
+    .iqt-work-title {
+      @extend .iqt-title;
+
+    }
+
+    .iqt-work-subtitle {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    .iqt-work-content {
+
+    }
+    .iqt-img {
+      position: absolute;
+    }
+
+    .iqt-work-text {
+      @extend .iqt-list-text;
+    }
+
+  }
+
+  .iqt-step1 {
+    min-height: 620px;
+    background: $iqt-color-white;
+    .hide-work-big {
+      display: none;
+    }
+    .hide-work-small {
+      display: block;
+    }
+    .iqt-img {
+      right: calc(50% + 150px);
+      margin-top: -80px;
+    }
+    .iqt-work-point {
+      margin-top: 40px;
+    }
+
+  }
+
+  .iqt-step2 {
+    background-color: $iqt-window-color;
+    min-height: 500px;
+
+    .iqt-img {
+      margin-left: 380px;
+      width: 600px;
+    }
+
+    .iqt-work-text {
+      padding-bottom: 16px;
+    }
+    .iqt-work-point {
+      margin-top: 0px;
+    }
+  }
+
+  .iqt-step3 {
+    min-height: 690px;
+    padding-bottom: 0;
+    background: $iqt-color-white;
+    .iqt-img {
+      width: 800px;
+      margin-left: -330px;
+      margin-top: 62px;
+    }
+    .iqt-work-text {
+      padding-bottom: 16px;
+    }
+
+    .iqt-work-point {
+      margin-top: 30px;
+    }
+  }
+
+  .iqt-guarantee {
+    background-color: #0E4FB3;
+    color: $iqt-color-white;
+
+    width: 100%;
+    padding-top: $iqt-margin-top-bottom;
+    padding-bottom: $iqt-margin-top-bottom;
+
+    .iqt-guarantee-title {
+      @extend .iqt-header-text;
+      padding-bottom: 0px;
+      text-transform: uppercase;
+    }
+
+    .iqt-guarantee-text {
+      opacity: .54;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .iqt-guarantee-img {
+      margin-left: -30px;
+      margin-right: 60px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .iqt-done {
+    width: 100%;
+    background: $iqt-window-color;
+    padding-top: $iqt-margin-top-bottom;
+    padding-bottom: $iqt-margin-top-bottom;
+  }
+
+  .iqt-contact {
+    background-color: $iqt-primary-color;
+    color: $iqt-color-white;
+
+    width: 100%;
+    padding-top: $iqt-margin-top-bottom;
+    padding-bottom: $iqt-margin-top-bottom;
+
+    .pip-footer-input {
+      min-height: 58px;
+      margin-bottom: 0px;
+      label {
+        color: $iqt-color-white !important;
+      }
+      .md-input {
+        color: $iqt-color-white !important;
+        border-bottom-color: $iqt-color-white !important;
+      }
+      &.md-input-invalid .md-input {
+        border-bottom-color: rgb(213, 0, 0) !important;
+      }
+    }
+
+    .iqt-contact-inputs {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .iqt-contact-content {
+      width: 100%
+    }
+
+    .iqt-contact-message {
+      width: 100%;
+    }
+  }
+
+  .iqt-footer {
+    background-color: $iqt-window-color;
+
+    width: 100%;
+    padding-top: $iqt-margin-top-bottom / 2;
+    padding-bottom: $iqt-margin-top-bottom / 2;
+
+    .iqt-footer-title {
+      font-size: 18px;
+      line-height: 26px;
+      color: $iqt-color-secondary-text;
+      font-weight: 500;
+      margin-top: 25px;
+      margin-bottom: 20px;
+    }
+
+    .iqt-footer-text {
+      font-size: 16px;
+      line-height: 24px;
+      a {
+        color: $iqt-primary-color !important;
+        display: block;
+        text-decoration-line: none;
+      }
+    }
+
+    .iqt-divider {
+      margin-top: 8px;
+      margin-bottom: 16px;
+      background: $iqt-color-white;
+      height: 5px;
+    }
+  }
+
+}
+
+
+@media(max-width: 1430px) {
+
+  .iqt-landing {
+   
+    .iqt-main-slide {
+      background-image: url('images/banner_md.jpg');
+      background-repeat: none;
+      background-position: 50% 50%;
+      height: 1672px;
+      
+    }
+
+    .iqt-main-slide .iqt-subheader {
+      margin-top: 150px;
+    }
+
+    .iqt-main-slide.iqt-main-slide-en {
+    background-image: url('images/banner_md-en.jpg');
+  }
+  }
+}
+
+@media(max-width: 1024px) {
+
+  .iqt-landing {
+    color: $iqt-color-text;
+
+    .iqt-hide {
+      display: none;
+    }
+    .iqt-content {
+      width: calc(100% - 60px);
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .iqt-content-side {
+      width: 100%;
+    }
+
+    .iqt-header-text {
+      font-size: 34px;
+      line-height: 40px;
+      font-weight: 700;
+    }
+
+    .iqt-title {
+      font-size: 24px;
+      line-height: 30px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+     .iqt-main-slide.iqt-main-slide-en {
+    background-image: url('images/banner_landscape-en.jpg');
+  }
+    .iqt-main-slide {
+      background-image: url('images/banner_landscape.jpg');
+      background-repeat: none;
+      background-position: 50% 50%;
+      height: 1672px;
+
+      .iqt-header {
+        margin-left: calc(50% - 667px / 2 + 30px);
+      }
+
+      .iqt-logo {
+        margin-bottom: 10px;
+        margin-top: 60px;
+        width: 300px;
+        height: 80px;
+      }
+    }
+
+    .iqt-instruments {
+      padding-top: $iqt-margin-top-bottom-sm;
+      padding-bottom: $iqt-margin-top-bottom-sm;
+      .iqt-instrument {
+        display: block;
+        width: 100%;
+
+        .iqt-instrument-content {
+          padding-left: 0px;
+          padding-right: 0px;
+          text-align: start;
+        }
+      }
+
+      .iqt-instruments-section-title {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+      }
+    }
+
+    .iqt-goals {
+
+      padding-top: $iqt-margin-top-bottom-sm;
+      padding-bottom: $iqt-margin-top-bottom-sm;
+    }
+
+    .iqt-work {
+
+      padding-top: $iqt-margin-top-bottom-sm;
+      padding-bottom: $iqt-margin-top-bottom-sm;
+      .iqt-img {
+        position: relative !important;
+        margin: 0 auto !important;
+        right: 0px !important;
+
+      }
+
+      .iqt-work-content {
+        @include flex-direction-column();
+      }
+
+      .iqt-work-center {
+        margin: 0 auto;
+        width: inherit;
+      }
+    }
+    .iqt-step1 {
+      .hide-work-big {
+        display: block;
+      }
+      .hide-work-small {
+        display: none;
+      }
+
+      .iqt-img {
+        height: 230px;
+        width: 100%;
+      }
+    }
+
+    .iqt-step2 {
+
+      .iqt-img {
+        height: 400px;
+        width: 100%;
+      }
+    }
+
+    .iqt-step3 {
+
+      .iqt-img {
+        height: 400px;
+        width: 100%;
+      }
+    }
+
+    .iqt-buy {
+
+      padding-top: $iqt-margin-top-bottom-sm;
+      padding-bottom: $iqt-margin-top-bottom-sm;
+      .iqt-buy-content {
+        @include flex-direction-column();
+      }
+
+      .iqt-buy-text {
+        max-width: 100%;
+      }
+    }
+
+    .iqt-contact {
+      .iqt-contact-content {
+        @include flex-direction-column();
+      }
+    }
+
+    .iqt-guarantee {
+
+      padding-top: $iqt-margin-top-bottom-sm;
+      padding-bottom: $iqt-margin-top-bottom-sm;
+      .iqt-content {
+        margin: 0px;
+        margin-right: 0px;
+        width: 100% !important;
+      }
+
+      .iqt-guarantee-img {
+        margin-left: 0px;
+        margin-right: 40px;
+      }
+
+    }
+
+    .iqt-footer {
+      .iqt-footer-content {
+        @include flex-direction-column();
+      }
+
+      .iqt-address {
+        min-height: 48px;
+      }
+      
+      .iqt-footer-phone {
+        min-height: 26px;
+      }
+    }
+  }
+}
+
+@media(max-width: 667px) {
+
+  .iqt-landing {
+
+    .iqt-content {
+      width: calc(100% - 60px);
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .iqt-content-side {
+      width: 100%;
+    }
+        .iqt-main-slide.iqt-main-slide-en {
+    background-image: url('images/banner-en.jpg');
+  }
+
+    .iqt-main-slide {
+      background-image: url('images/banner.jpg');
+      background-repeat: none;
+      background-position: 50% 50%;
+      height: 1093px;
+
+      .iqt-header {
+        width: 330px;
+        margin-left: calc(50% - 357px / 2 + 16px);
+        .iqt-header-text {
+            font-size: 30px;
+        }
+      }
+
+      .iqt-header-button {
+        margin-top: 20px;
+      }
+
+      .iqt-logo {
+        margin-bottom: 10px;
+        margin-top: 30px;
+        width: 300px;
+        height: 80px;
+      }
+    }
+
+    .iqt-step1 {
+      .hide-work-big {
+        display: block;
+      }
+      .hide-work-small {
+        display: none;
+      }
+
+      .iqt-img {
+        height: 150px;
+        width: 100%;
+      }
+    }
+
+    .iqt-step2 {
+
+      .iqt-img {
+        height: 200px;
+        width: 100%;
+      }
+    }
+
+    .iqt-step3 {
+
+      .iqt-img {
+        height: 200px;
+        width: 100%;
+      }
+    }
+
+    .iqt-goals {
+      .iqt-goal {
+        display: block;
+        .iqt-goal-icon {
+          margin: 0 auto;
+        }
+      }
+    }
+
+
+    .iqt-guarantee {
+      min-height: 480px;
+      .iqt-content {
+        @include flex-direction-column();
+      }
+      .iqt-guarantee-img {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        height: 150px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .iqt-header-links {
+        margin-top: 16px;
+        a {
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+  }
+
+}
+

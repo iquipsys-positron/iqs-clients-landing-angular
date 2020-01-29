@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Компания Айквипсис представляет Позитрон - систему позиционирования персонала и техники, разработанную на основе технологии Интернета Вещей специально для производственных площадок. Система полностью удовлетворяет требованиям Ростехнадзора, проста во внедрении, не требует капитальных затрат, и значительно повышает уровень автоматизации, безопасности и контроля на предприятии. ">
+    <meta name="keywords" content="Iquipsys positron">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Iquipsys positron</title>
+    <link rel="stylesheet" href="pip-webui-lib.min.css" />
+    <link rel="stylesheet" href="pip-webui-css.min.css" />
+    <link rel="stylesheet" href="iquipsys.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="icon" href="images/iqt.ico" type="image/x-icon" />
+    <style>
+        .loader,
+        .loader:before,
+        .loader:after {
+            border-radius: 50%;
+        }
+
+        .loader {
+            color: #1565c0;
+            background: #d8d8d8;
+            font-size: 11px;
+            text-indent: -99999em;
+            margin: 0 auto;
+            position: relative;
+            width: 20em;
+            height: 20em;
+            box-shadow: inset 0 0 0 1em;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .loader:before,
+        .loader:after {
+            position: absolute;
+            content: '';
+        }
+
+        .loader:before {
+            width: 10.2em;
+            height: 20.4em;
+            background: #d8d8d8;
+            border-radius: 20.4em 0 0 20.4em;
+            top: -0.1em;
+            left: -0.1em;
+            -webkit-transform-origin: 10.2em 10.2em;
+            transform-origin: 10.2em 10.2em;
+            -webkit-animation: load2 2s infinite ease 1.5s;
+            animation: load2 2s infinite ease 1.5s;
+        }
+
+        .loader:after {
+            width: 10.2em;
+            height: 20.4em;
+            background: #d8d8d8;
+            border-radius: 0 20.4em 20.4em 0;
+            top: -0.1em;
+            left: 10em;
+            -webkit-transform-origin: 0px 10.2em;
+            transform-origin: 0px 10.2em;
+            -webkit-animation: load2 2s infinite ease;
+            animation: load2 2s infinite ease;
+        }
+
+        @-webkit-keyframes load2 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes load2 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body ng-app="iquipsysApp" ng-controller="iquipsysController" ng-class="{'pip-windows': isWindows()}">
+    <div ui-view ng-cloak class="w-stretch h-stretch" ng-if="!$reset"></div>
+
+    <div ng-if="$reset" class="layout-column flex layout-align-center-center" style="width: 100%; height: 100%; background-color: #eeeeee;">
+        <div class="loader"></div>
+        <img src="images/iqt-logo-color.svg" height="70" width="70" style="position: absolute; z-index: 1000">
+    </div>
+
+    <script src="pip-webui-lib.min.js" type="text/javascript"></script>
+    <script src="pip-webui-core.min.js" type="text/javascript"></script>
+    <script src="pip-webui-services.js" type="text/javascript"></script>
+    <script src="iquipsys.min.js" type="text/javascript"></script>
+    <!-- Global organization tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120239019-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120239019-1');
+    </script>
+    <!-- <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-120239019-1', 'auto');
+        ga('send', 'pageview');
+    </script> -->
+</body>
+
+</html>

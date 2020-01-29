@@ -1,0 +1,10 @@
+@import "../node_modules/pip-webui-css/dist/pip-webui-css.scss";
+
+//Importing client style
+@import "landing/landing";
+//@import "careers/careers";
+
+body{
+  overflow-x: hidden;
+}
+
