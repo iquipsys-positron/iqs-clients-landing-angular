@@ -27,15 +27,15 @@ module.exports = {
         publish: {
             alpha: {
                 bucket: 'alpha.tilabs.com',
-                accessKeyId: 'AKIAIUIMYH5EZ552KQAA',
-                secretAccessKey: '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',
+                accessKeyId: '',
+                secretAccessKey: '',
                 region: 'us-west-2'
             },
             beta: {},
             production: {
                 bucket: 'www.tilabs.com',
-                accessKeyId: 'AKIAIUIMYH5EZ552KQAA',
-                secretAccessKey: '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',
+                accessKeyId: '',
+                secretAccessKey: '',
                 region: 'us-west-2'
             }
         }
